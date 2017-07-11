@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build ./ -t devfest2017/persisentecemodule:1.0
+docker build ./ -t devfest2017/persistencemodule:1.0
