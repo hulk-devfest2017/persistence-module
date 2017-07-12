@@ -4,7 +4,7 @@
 require "json"
 require "mongo"
 
-client = Mongo::Client.new('mongodb://127.0.0.1:27017/hulkdevfestgame')
+client = Mongo::Client.new('mongodb://mongodb:27017/hulkdevfestgame')
 collection = client[:results]
 
 collection.find.each do |document|

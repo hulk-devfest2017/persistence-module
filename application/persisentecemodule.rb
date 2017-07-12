@@ -9,7 +9,7 @@ client = Mongo::Client.new('mongodb://127.0.0.1:27017/hulkdevfestgame')
 collection = client[:results]
 
 #connect to the mqtt 'results topic' parse the result json messages and tweet them
-MQTT::Client.connect(:host => '127.0.0.1', :port => 1883) do |c|
+MQTT::Client.connect(:host => 'mqtt', :port => 1883) do |c|
   c.get('results') do |topic,json_message|
     begin
       message_hash = JSON.parse(json_message)
@@ -22,5 +22,3 @@ MQTT::Client.connect(:host => '127.0.0.1', :port => 1883) do |c|
     end
   end
 end
-
-
