@@ -5,7 +5,7 @@ require "mqtt"
 require "json"
 require "mongo"
 
-client = Mongo::Client.new('mongodb://127.0.0.1:27017/hulkdevfestgame')
+client = Mongo::Client.new('mongodb://mongo:27017/hulkdevfestgame')
 collection = client[:results]
 
 #connect to the mqtt 'results topic' parse the result json messages and tweet them
