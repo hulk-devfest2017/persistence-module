@@ -5,6 +5,8 @@ require "mqtt"
 require "json"
 require "mongo"
 
+$stdout.sync = true
+
 client = Mongo::Client.new('mongodb://mongo:27017/hulkdevfestgame')
 collection = client[:results]
 
